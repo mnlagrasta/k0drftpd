@@ -1,0 +1,31 @@
+= K0DRftpd =
+
+== Overview ==
+Absolute minimal FTP server meant to receive incoming connections from Canon and Nikon camera wireless file transmitters.
+Apparently, the camera manufacturers can't/won't/haven't implemented SFTP and meanwhile Apple dropped (or hid) FTP support with the release of OS X Lion.
+It should also work with many other similar devices and FTP clients.
+
+For more info, check k0dr.com or lagrasta.com
+
+== Installation ==
+
+* Install NodeJS (http://nodejs.org)
+* Copy this repo to your hard drive
+
+== Usage ==
+
+{{{node k0drftpd.js}}}
+
+You can get extra help using the -h or --help param.
+
+== Attention Notice Warning Alert ==
+At this time, there is NO SECURITY enforced in this server.
+It's fine for use within a private network when you can start the server only when needed.
+
+== Future Plans ==
+I'd like to add a way to submit a list of valid user logins. I've got the hooks in place, but the code isn't functional.
+
+I'm also watching the AppJS project for updates on the Mac version, which will allow me to package this up as "native" looking application.
+
+== Credits ==
+The core of the FTP server code comes directly from alanszlosek's fork of nodeftpd which can be found on GitHub here: https://github.com/alanszlosek/nodeftpd. All I did was put a wrapper around it, but I figured someone else might find it useful.
